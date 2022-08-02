@@ -15,7 +15,7 @@ class UploadButton extends React.Component {
 
     fetchJwtToken = async () => {
         const {data} = await axios.post(
-            'http://localhost:8080/authenticate',
+            'https://image-to-text-backend.herokuapp.com/authenticate',
             {
                 username: this.username,
                 password: this.password
@@ -37,7 +37,7 @@ class UploadButton extends React.Component {
             }
         }
         axios.post(
-            'http://localhost:8080/image/extract',
+            'https://image-to-text-backend.herokuapp.com/image/extract',
             formData,
             config
         ).then(
